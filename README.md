@@ -35,9 +35,9 @@ The current prototype focuses on interactive playground design, route connectivi
 
 ### Language & Local Context | اللغة والهوية المحلية
 
-**Arabic is currently the sole interface language.** This is an intentional Arabic-first design choice reflecting RAWIYYAH's Saudi identity, cultural context, and the language used by its primary intended audience: engineers and design teams working with Saudi municipalities and local authorities. The project values its Arabic-language heritage and local relevance while maintaining inclusive access to the playgrounds it helps plan.
+**Arabic is currently the sole interface language.** This Arabic-first approach reflects RAWIYYAH's Saudi identity and the local context in which the project was conceived. The system is intended for engineering and design teams working on inclusive playgrounds in Saudi Arabia, regardless of their nationality or first language.
 
-English localization is not included in the current release and may be considered in future development.
+We recognize that these teams may include professionals with diverse linguistic backgrounds. Multilingual support, including English, is a potential future enhancement to make the platform more accessible to its wider professional audience.
 
 ### Features
 
