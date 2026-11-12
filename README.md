@@ -28,9 +28,9 @@ The platform brings the playground design process into one workspace. Interactiv
 
 HTML · CSS · JavaScript · PHP · MySQL
 
-### Note
+### Project Status
 
-Accessibility review findings provide design support and do not replace an official compliance assessment.
+RAWIYYAH is a functional prototype available for exploration and evaluation. While its core features are implemented, occasional issues may occur during use. Accessibility assessment results are provided for design support only and do not constitute official compliance certification.
 
 ---
 
