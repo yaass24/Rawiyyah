@@ -34,4 +34,4 @@ Accessibility review findings provide design support and do not replace an offic
 
 A collaborative project by the **RAWIYYAH Team**.
 
-**Concept, UX/UI Design & Implementation — Yasmin Almomen**
+**Concept and Implementation — Yasmin Almomen**
