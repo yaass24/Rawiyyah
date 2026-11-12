@@ -10,6 +10,10 @@ RAWIYYAH is a web-based workspace for planning inclusive playgrounds, reviewing 
 
 > **Best viewed on a laptop or desktop:** RAWIYYAH's interactive design workspace is optimized for larger screens. For the best experience, please open the website on a computer; mobile use may be limited.
 
+### UI/UX Screen Design | تصميم واجهات النظام
+
+**[Explore RAWIYYAH Screens & User Flow on Figma](https://www.figma.com/design/2GawzgM1IP3HQyRKrVWjN1/RAWIYYAH?node-id=101-2)** — Includes the original screen concepts, a screen-by-screen guide, and proposed manager-workflow extensions. Some designs are exploratory and may differ from the current live website.
+
 ### Brand Identity | الهوية البصرية
 
 **[View RAWIYYAH Brand Identity on Figma](https://www.figma.com/design/MYUjlsdpemHDZ4yI7Ly67k/%D8%B1%D9%8E%D9%88%D9%90%D9%8A%D9%91%D8%A9-RAWIYYAH?node-id=0-1)**
