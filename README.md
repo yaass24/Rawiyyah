@@ -41,7 +41,7 @@ A review of an available application source file identifies the following scope 
 - Design assignments, engineering team accounts, internal review workflows, and printable assessment reports.
 
 **Gaps and planned improvements**
-- **Comparison testing and expansion:** Test and fix the existing snapshot comparison in the live environment (including button navigation, saving, and version selection), then add comparison of separate alternatives or projects with consistent assessment indicators.
+- **Comparison enhancement:** The existing comparison is designed to compare the current layout against a saved version within the same project. A future enhancement would extend this to independently created design alternatives or projects, with consistent accessibility and route-connectivity indicators. Functionality on the live website still requires end-to-end verification.
 - **Multilingual support:** Extend the current Arabic-only interface to English and potentially other languages for a wider range of engineering teams.
 - **Assessment validation:** Review the rules and results with accessibility specialists, end users, and applicable local requirements. The current connectivity model is an indicative planning check, **not an engineering-grade accessibility verification**.
 - **AI-supported guidance:** Explore explainable suggestions for detected issues in a later phase; this is **not an implemented AI feature** in the reviewed code.
