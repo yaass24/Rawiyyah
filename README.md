@@ -28,7 +28,7 @@ RAWIYYAH aligns with the aspirations of **Saudi Vision 2030**, particularly its 
 
 The current prototype focuses on interactive playground design, route connectivity checks, a 13-point accessibility review, project assignments, and reporting. The following areas are potential enhancements rather than verified features of the live system:
 
-- **Side-by-side design comparison:** Compare alternative layouts and their assessment results to support design decisions.
+- **Design comparison (not currently supported):** The current live version does not yet provide a working side-by-side comparison of alternative playground layouts. Future development will add comparison of designs, accessibility assessment results, and route connectivity to support design decisions.
 - **AI-assisted explanations:** Explore explanations of identified issues and possible improvements, subject to evaluation for accuracy.
 - **Broader validation:** Test the assessment rules and user experience with accessibility specialists and intended users.
 - **Reliability improvements:** Expand end-to-end testing and refine workflow and error handling.
