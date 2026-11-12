@@ -12,6 +12,10 @@ RAWIYYAH is a web-based workspace for planning inclusive playgrounds, reviewing 
 
 **[View RAWIYYAH Brand Identity on Figma](https://www.figma.com/design/MYUjlsdpemHDZ4yI7Ly67k/%D8%B1%D9%8E%D9%88%D9%90%D9%8A%D9%91%D8%A9-RAWIYYAH?node-id=0-1)**
 
+### The Meaning Behind RAWIYYAH | معنى رَويَّة
+
+Inspired by **التروّي والتأنّي** — thoughtful consideration before taking action — the name *RAWIYYAH* reflects the project's guiding idea: **review accessibility before building, rather than discovering barriers after implementation.** The goal is to encourage deliberate, inclusive design decisions from the earliest planning stages.
+
 ### Overview
 
 The platform brings the playground design process into one workspace. Interactive design and visualization tools are paired with structured accessibility review, project tracking, and reporting.
@@ -24,15 +28,22 @@ Accessibility barriers can be difficult and expensive to address after a playgro
 
 RAWIYYAH aligns with the aspirations of **Saudi Vision 2030**, particularly its **Vibrant Society** pillar and the **Quality of Life Program**, by exploring how digital design tools can support more inclusive public recreation spaces. This is a project-level alignment, not an official affiliation or endorsement.
 
-### Current Scope & Future Opportunities
+### Current Scope & Development Roadmap
 
-The current prototype focuses on interactive playground design, route connectivity checks, a 13-point accessibility review, project assignments, and reporting. The following areas are potential enhancements rather than verified features of the live system:
+A review of the current application code identifies the following scope and opportunities. These reflect implemented code paths, not a claim that every live workflow has passed production testing.
 
-- **Design comparison (not currently supported):** The current live version does not yet provide a working side-by-side comparison of alternative playground layouts. Future development will add comparison of designs, accessibility assessment results, and route connectivity to support design decisions.
-- **AI-assisted explanations:** Explore explanations of identified issues and possible improvements, subject to evaluation for accuracy.
-- **Broader validation:** Test the assessment rules and user experience with accessibility specialists and intended users.
-- **Reliability improvements:** Expand end-to-end testing and refine workflow and error handling.
-- **Multilingual interface:** The current version is Arabic-only. Future development will work toward English and additional language support to serve engineering teams with diverse linguistic backgrounds.
+**Current capabilities in the code**
+- Interactive 2D/3D playground layout editing and saved design versions.
+- A **limited comparison within one project**: the current layout can be compared with a saved version, including element counts and changes in planning observations. This is not a general comparison between separate projects or independently evaluated design alternatives.
+- Rule-based assessment of 13 accessibility considerations, plus a **planning-level path connectivity check** based on the modeled entrances, pathways, and play equipment.
+- Design assignments, engineering team accounts, internal review workflows, and printable assessment reports.
+
+**Gaps and planned improvements**
+- **Expanded design comparison:** Support selecting and comparing separate design alternatives or projects, with consistent accessibility and connectivity indicators, rather than only comparing a design to its saved version.
+- **Multilingual support:** Extend the current Arabic-only interface to English and potentially other languages for a wider range of engineering teams.
+- **Assessment validation:** Review the rules and results with accessibility specialists, end users, and applicable local requirements. The current connectivity model is an indicative planning check, **not an engineering-grade accessibility verification**.
+- **AI-supported guidance:** Explore explainable suggestions for detected issues in a later phase; this is **not an implemented AI feature** in the reviewed code.
+- **Workflow reliability and user experience:** Expand cross-account end-to-end testing, improve handling of save conflicts and failures, and refine accessible interactions and feedback.
 
 ### Language & Local Context | اللغة والهوية المحلية
 
