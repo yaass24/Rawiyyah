@@ -30,4 +30,8 @@ Accessibility review findings provide design support and do not replace an offic
 
 ---
 
-**Created by Yasmin Almomen**
+### RAWIYYAH Team | فريق رَويَّة
+
+A collaborative project by the **RAWIYYAH Team**.
+
+**Concept, UX/UI Design & Implementation — Yasmin Almomen**
