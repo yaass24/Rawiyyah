@@ -18,6 +18,10 @@ RAWIYYAH is a web-based workspace for planning inclusive playgrounds, reviewing 
 
 Inspired by **التروّي والتأنّي** — thoughtful consideration before taking action — the name *RAWIYYAH* reflects the project's guiding idea: **review accessibility before building, rather than discovering barriers after implementation.** The goal is to encourage deliberate, inclusive design decisions from the earliest planning stages.
 
+### Design Evolution
+
+RAWIYYAH evolved through iterations from initial UX/UI concepts into a working web application. As a result, early Figma explorations may differ from the current implemented screens in layout, navigation, and workflow details. The Figma link above currently showcases the visual identity; the live website is the reference for the latest implemented interface. Any future screen archive should clearly label **initial concepts** and **implemented screens** rather than presenting them as identical.
+
 ### Overview
 
 The platform brings the playground design process into one workspace. Interactive design and visualization tools are paired with structured accessibility review, project tracking, and reporting.
