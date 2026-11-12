@@ -30,16 +30,16 @@ RAWIYYAH aligns with the aspirations of **Saudi Vision 2030**, particularly its 
 
 ### Current Scope & Development Roadmap
 
-A review of the current application code identifies the following scope and opportunities. These reflect implemented code paths, not a claim that every live workflow has passed production testing.
+A review of an available application source file identifies the following scope and opportunities. These describe code-level capabilities; their behavior in the deployed version has not been independently verified.
 
 **Current capabilities in the code**
 - Interactive 2D/3D playground layout editing and saved design versions.
-- A **limited comparison within one project**: the current layout can be compared with a saved version, including element counts and changes in planning observations. This is not a general comparison between separate projects or independently evaluated design alternatives.
+- A **limited comparison within one project** is implemented in the available JavaScript source: the button routes to a comparison screen, and there are handlers to save design snapshots, select saved versions, display differences, and restore versions. This does **not** establish that the feature works reliably in the deployed website. It also does not compare independent projects or fully evaluated design alternatives.
 - Rule-based assessment of 13 accessibility considerations, plus a **planning-level path connectivity check** based on the modeled entrances, pathways, and play equipment.
 - Design assignments, engineering team accounts, internal review workflows, and printable assessment reports.
 
 **Gaps and planned improvements**
-- **Expanded design comparison:** Support selecting and comparing separate design alternatives or projects, with consistent accessibility and connectivity indicators, rather than only comparing a design to its saved version.
+- **Comparison testing and expansion:** Test and fix the existing snapshot comparison in the live environment (including button navigation, saving, and version selection), then add comparison of separate alternatives or projects with consistent assessment indicators.
 - **Multilingual support:** Extend the current Arabic-only interface to English and potentially other languages for a wider range of engineering teams.
 - **Assessment validation:** Review the rules and results with accessibility specialists, end users, and applicable local requirements. The current connectivity model is an indicative planning check, **not an engineering-grade accessibility verification**.
 - **AI-supported guidance:** Explore explainable suggestions for detected issues in a later phase; this is **not an implemented AI feature** in the reviewed code.
@@ -69,7 +69,7 @@ HTML · CSS · JavaScript · PHP · MySQL
 
 ### Project Status
 
-RAWIYYAH is a functional prototype available for exploration and evaluation. While its core features are implemented, occasional issues may occur during use. The references above inform the design approach; the project is not affiliated with, endorsed by, or certified by either organization. Its accessibility review results are for design support and do not constitute official compliance certification.
+A software project can be functional and valuable without being feature-complete forever. RAWIYYAH is a functional prototype available for exploration and evaluation; its development roadmap documents known limitations and future enhancements rather than implying that every feature is finished. While its core features are implemented, occasional issues may occur during use. The references above inform the design approach; the project is not affiliated with, endorsed by, or certified by either organization. Its accessibility review results are for design support and do not constitute official compliance certification.
 
 ---
 
