@@ -8,6 +8,8 @@ RAWIYYAH is a web-based workspace for planning inclusive playgrounds, reviewing 
 
 **[Visit RAWIYYAH](https://rawiyyah.free.je/)**
 
+> **Best viewed on a laptop or desktop:** RAWIYYAH's interactive design workspace is optimized for larger screens. For the best experience, please open the website on a computer; mobile use may be limited.
+
 ### Brand Identity | الهوية البصرية
 
 **[View RAWIYYAH Brand Identity on Figma](https://www.figma.com/design/MYUjlsdpemHDZ4yI7Ly67k/%D8%B1%D9%8E%D9%88%D9%90%D9%8A%D9%91%D8%A9-RAWIYYAH?node-id=0-1)**
