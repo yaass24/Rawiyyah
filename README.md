@@ -16,6 +16,23 @@ RAWIYYAH is a web-based workspace for planning inclusive playgrounds, reviewing 
 
 The platform brings the playground design process into one workspace. Interactive design and visualization tools are paired with structured accessibility review, project tracking, and reporting.
 
+### Why RAWIYYAH?
+
+Accessibility barriers can be difficult and expensive to address after a playground has been built. RAWIYYAH aims to help design teams consider inclusive access earlier, bringing playground layout, route connectivity, and review documentation into one workflow.
+
+### Alignment with Saudi Vision 2030
+
+RAWIYYAH aligns with the aspirations of **Saudi Vision 2030**, particularly its **Vibrant Society** pillar and the **Quality of Life Program**, by exploring how digital design tools can support more inclusive public recreation spaces. This is a project-level alignment, not an official affiliation or endorsement.
+
+### Current Scope & Future Opportunities
+
+The current prototype focuses on interactive playground design, route connectivity checks, a 13-point accessibility review, project assignments, and reporting. The following areas are potential enhancements rather than verified features of the live system:
+
+- **Side-by-side design comparison:** Compare alternative layouts and their assessment results to support design decisions.
+- **AI-assisted explanations:** Explore explanations of identified issues and possible improvements, subject to evaluation for accuracy.
+- **Broader validation:** Test the assessment rules and user experience with accessibility specialists and intended users.
+- **Reliability improvements:** Expand end-to-end testing and refine workflow and error handling.
+
 ### Features
 
 - **Interactive playground design** — Create and visualize playground layouts.
