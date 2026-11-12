@@ -32,12 +32,11 @@ The current prototype focuses on interactive playground design, route connectivi
 - **AI-assisted explanations:** Explore explanations of identified issues and possible improvements, subject to evaluation for accuracy.
 - **Broader validation:** Test the assessment rules and user experience with accessibility specialists and intended users.
 - **Reliability improvements:** Expand end-to-end testing and refine workflow and error handling.
+- **Multilingual interface:** The current version is Arabic-only. Future development will work toward English and additional language support to serve engineering teams with diverse linguistic backgrounds.
 
 ### Language & Local Context | اللغة والهوية المحلية
 
-**Arabic is currently the sole interface language.** This Arabic-first approach reflects RAWIYYAH's Saudi identity and the local context in which the project was conceived. The system is intended for engineering and design teams working on inclusive playgrounds in Saudi Arabia, regardless of their nationality or first language.
-
-We recognize that these teams may include professionals with diverse linguistic backgrounds. Multilingual support, including English, is a potential future enhancement to make the platform more accessible to its wider professional audience.
+RAWIYYAH currently offers an Arabic interface, reflecting the project's Saudi origin and local design context. The intended users may come from different linguistic backgrounds; additional language support is therefore included in the future development roadmap.
 
 ### Features
 
