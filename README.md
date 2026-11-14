@@ -3,13 +3,15 @@
 
 ## 1. The Problem | المشكلة
 
-Public playgrounds are not always equally usable by children with different abilities. Access involves more than selecting accessible play equipment: entrances, routes, surfaces, and the way play areas connect can all affect participation.
+Inclusive playground design is supported by published principles and guidance, yet translating those references into practical, repeatable design decisions can still be challenging. A team may need to examine entrances, routes, surfaces, play elements, and connections **together**, rather than as isolated features.
 
-RAWIYYAH explores a practical question: **How can a design team identify potential accessibility barriers while planning a playground, before construction begins?**
+**The opportunity we identified:** make relevant accessibility considerations easier to apply and review *during digital playground planning*, before the design reaches construction. This is an opportunity to support an existing process—not a claim that no digital design or assessment tools exist.
 
 ## 2. Research & Design Foundations | الخلفية البحثية
 
-The idea began with research into **Universal Design** and inclusive play. The **UNICEF Inclusive Playground Toolkit** was a key inspiration for considering children with different abilities throughout the design process. Saudi guidance on inclusive parks helped ground the concept in a local context.
+Our starting point was **research, not software development**. We looked for established principles, criteria, and guidance that engineers could draw on when planning inclusive playgrounds. Exploring **Universal Design** and the **UNICEF Inclusive Playground Toolkit** helped shape the direction of the idea. We also examined Saudi guidance for local design context.
+
+The next question was how this knowledge could be translated into a usable digital workflow instead of remaining only as material that a designer reads and interprets separately.
 
 ### Why the problem matters
 
@@ -25,9 +27,11 @@ The idea began with research into **Universal Design** and inclusive play. The *
 
 ## 3. From Research to RAWIYYAH | من البحث إلى الفكرة
 
-The research inspired a digital workspace that brings **playground layout, early accessibility checks, modeled route connectivity, and review documentation** into one planning process.
+After identifying useful guidance, we explored how design teams might apply it in practice. That led to RAWIYYAH: a prototype that brings **playground layout, rule-based review, simplified route-connectivity checks, and documented feedback** into one workspace.
 
-The name **رَويَّة** comes from *التروّي والتأنّي*: considering decisions carefully before acting. Here, that means examining possible barriers **before a playground is built**.
+The goal is **to help move from reference material to actionable design-time review**—not to replace specialist judgment or claim that existing guidance has been fully automated.
+
+The name **رَويَّة** reflects *التروّي والتأنّي*: taking time to consider a decision carefully **before implementation**.
 
 ## 4. The Proposed Solution | الحل
 
