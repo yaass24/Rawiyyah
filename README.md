@@ -67,6 +67,22 @@ RAWIYYAH currently offers an Arabic interface, reflecting the project's Saudi or
 - **Team management** — Manage designer accounts and assignments through role-based access.
 - **Project reports** — Organize design outcomes and assessment observations.
 
+### Research Inspiration & Evidence | البحث والإلهام
+
+**How the idea began.** RAWIYYAH grew from exploratory research into **Universal Design**, children's right to play, and barriers faced by children with disabilities in public playgrounds. The **UNICEF Inclusive Playground Toolkit** was a key source of inspiration: rather than assessing access only after construction, the project explores how engineers can consider inclusive access while designing and reviewing a playground. Saudi inclusive-park guidance provided further local context.
+
+**Why this problem matters — supporting published evidence**
+
+1. **UNICEF Malaysia & Sime Darby Property (2021), _Inclusive Playground: Best Business Practice Circular & Guidance Toolkit_.** Presents inclusive-playground guidance based on universal and human-centred design, informed by children with and without disabilities, families, and specialists. [UNICEF publication](https://www.unicef.org/malaysia/reports/inclusive-playground)
+2. **Brown et al. (2021), _A Scoping Review of Evidence-Informed Recommendations for Designing Inclusive Playgrounds_.** Synthesized 35 studies and identified recommendations across entrances, surfaces and paths, inclusive play features, supervision, and the design process. This supports reviewing the **whole play environment**, not only individual equipment. [Open-access research](https://pmc.ncbi.nlm.nih.gov/articles/PMC9397725/)
+3. **_Accessibility and usability of playground environments for children under 12: A scoping review_ (2015).** Synthesized 14 articles and identified environmental barriers to access and inclusion, highlighting playground design as an important factor. [PubMed](https://pubmed.ncbi.nlm.nih.gov/26065905/)
+4. **_Occupational Injustice and the Right to Play: A Systematic Review of Accessible Playgrounds for Children With Disabilities_ (2023).** Nine studies met the review criteria; eight reported negative effects on aspects of play, social participation, or motor skills despite accessible-playground labels. The findings underline why access should not be reduced to a label alone. [PubMed](https://pubmed.ncbi.nlm.nih.gov/37040103/)
+5. **King Salman Center for Disability Research, _Inclusive Parks Guide (دليل حدائق الدمج)_.** Provides Saudi design guidance for inclusive parks, including universal-design principles and the dimensions of park elements. [Official guide](https://kscdr.org.sa/en/node/3776)
+
+**From research to project concept:** The research motivated an early-stage review workflow combining playground layout, modeled path connectivity, accessibility considerations, and documented feedback. These sources **support the importance of the problem and the design approach**, not a claim that RAWIYYAH's software has been scientifically validated.
+
+**Scope of the evidence:** The peer-reviewed studies above are additional supporting literature; listing them does not imply every study was used in the earliest concept phase. Likewise, the project's **13 accessibility checks are not the same as the 13 recommendations reported by Brown et al.**, and no exact equivalence or certification is claimed.
+
 ### Reference Frameworks
 
 RAWIYYAH draws inspiration from published inclusive-playground and universal-design guidance. The resources below support the **design rationale**; they do not independently validate RAWIYYAH's software checks or establish official compliance.
