@@ -24,7 +24,7 @@ Inspired by **التروّي والتأنّي** — thoughtful consideration bef
 
 ### Design Evolution
 
-RAWIYYAH evolved through iterations from initial UX/UI concepts into a working web application. As a result, early Figma explorations may differ from the current implemented screens in layout, navigation, and workflow details. The Figma link above currently showcases the visual identity; the live website is the reference for the latest implemented interface. Any future screen archive should clearly label **initial concepts** and **implemented screens** rather than presenting them as identical.
+RAWIYYAH evolved through iterations from initial UX/UI concepts into a working web application. As a result, early Figma explorations may differ from the current implemented screens in layout, navigation, and workflow details. The linked Figma files separately document the visual identity and evolving UI concepts; the live website is the reference for the latest implemented interface. Any future screen archive should clearly label **initial concepts** and **implemented screens** rather than presenting them as identical.
 
 ### Overview
 
@@ -69,9 +69,16 @@ RAWIYYAH currently offers an Arabic interface, reflecting the project's Saudi or
 
 ### Reference Frameworks
 
-RAWIYYAH's accessibility review approach is informed by published guidance from **UNICEF** on inclusive playground design and the **King Salman Center for Disability Research** on universal accessibility in the built environment. The project's 13 review considerations are an application-level interpretation, not an official checklist or certification issued by either organization.
+RAWIYYAH draws inspiration from published inclusive-playground and universal-design guidance. The resources below support the **design rationale**; they do not independently validate RAWIYYAH's software checks or establish official compliance.
 
-**References:** [UNICEF — Inclusive Playground Toolkit](https://www.unicef.org/malaysia/reports/inclusive-playground) · [King Salman Center for Disability Research](https://www.kscdr.org.sa/)
+**Selected guidance and official sources**
+- [King Salman Center for Disability Research — Inclusive Parks Guide (دليل حدائق الدمج)](https://email.kscdr.org.sa/index.php/ar/node/3776) — Saudi guidance on inclusive park design and universal design principles.
+- [UNICEF Malaysia & Sime Darby Property — Inclusive Playground Guidance Toolkit (2021)](https://www.unicef.org/malaysia/reports/inclusive-playground) — practical guidance informed by children, families and disability practitioners.
+- [Saudi Vision 2030 — Official Website](https://www.vision2030.gov.sa/en) — contextual reference for the Vibrant Society theme and Quality of Life Program; alignment does not imply an official connection.
+
+**Evidence boundary:** The 13 checks in this prototype are project-level review considerations, **not a certified or officially endorsed checklist**. A criterion-by-criterion mapping to the applicable source and current Saudi requirements has not yet been published or independently validated. Engineering measurements and statutory compliance must be confirmed before construction.
+
+Peer-reviewed studies and usability evaluations would strengthen a future academic case study or validation report, but are **not presented here as completed research or proven outcomes**.
 
 ### Technology
 
@@ -79,7 +86,7 @@ HTML · CSS · JavaScript · PHP · MySQL
 
 ### Project Status
 
-A software project can be functional and valuable without being feature-complete forever. RAWIYYAH is a functional prototype available for exploration and evaluation; its development roadmap documents known limitations and future enhancements rather than implying that every feature is finished. While its core features are implemented, occasional issues may occur during use. The references above inform the design approach; the project is not affiliated with, endorsed by, or certified by either organization. Its accessibility review results are for design support and do not constitute official compliance certification.
+RAWIYYAH is a functional prototype available for exploration and evaluation. The roadmap documents current limitations and future improvements. Some workflows require further testing, and occasional issues may occur during use. The references above inform the design approach; the project is not affiliated with, endorsed by, or certified by either organization. Its accessibility review results are for design support and do not constitute official compliance certification.
 
 ---
 
