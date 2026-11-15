@@ -1,93 +1,126 @@
 /*!
- * rawiyyah-fetch-guard.js
- * يمنع ظهور خطأ: Unexpected token '<', "<html><bod"... is not valid JSON
+ * RAWIYYAH fetch response guard
  *
- * السبب: نظام الحماية في استضافة InfinityFree يرجّع صفحة تحقق (aes.js)
- * بدل JSON إذا انتهت كوكي الحماية (__test).
+ * Handles hosting security pages returned instead of JSON.
+ * - Never retries POST / PUT / PATCH / DELETE requests.
+ * - Never silently reloads the page or uses hidden iframes.
+ * - Keeps normal JSON and intentional HTML responses unchanged.
+ * - Converts unexpected HTML from JSON/API requests into a readable JSON error.
  *
- * الحل: هذا الملف يراقب كل طلبات fetch داخل الموقع. إذا رجعت صفحة التحقق،
- * يجدّد الكوكي في الخلفية (iframe مخفي) ثم يعيد نفس الطلب تلقائيًا،
- * فالمستخدم ما يشوف أي خطأ ولا تنمسح بياناته.
- *
- * الاستخدام: ارفعي الملف بجانب index، وأضيفي هذا السطر داخل <head>
- * قبل أي سكربت ثاني:
+ * IMPORTANT:
+ * Include BEFORE the application's scripts:
  *   <script src="rawiyyah-fetch-guard.js"></script>
+ *
+ * This does not fix expired hosting cookies or server-side errors. It prevents
+ * JSON parsing exceptions and gives the application a consistent error response.
  */
 (function () {
   'use strict';
-  if (!window.fetch || window.__rawiyyahFetchGuard) return;
+
+  if (typeof window === 'undefined' || !window.fetch || window.__rawiyyahFetchGuard) {
+    return;
+  }
+
   window.__rawiyyahFetchGuard = true;
-
-  var originalFetch = window.fetch.bind(window);
-  var refreshing = null; // طلب تجديد واحد فقط في نفس الوقت
-
-  // هل الرد هو صفحة التحقق حقت الاستضافة؟
-  function isChallenge(res) {
-    var type = (res.headers.get('content-type') || '').toLowerCase();
-    if (type.indexOf('text/html') === -1) return Promise.resolve(false);
-    return res.clone().text().then(function (body) {
-      return body.indexOf('/aes.js') !== -1 && body.indexOf('__test') !== -1;
-    }).catch(function () { return false; });
-  }
-
-  // يفتح الموقع في iframe مخفي عشان سكربت الحماية يضبط الكوكي من جديد
-  function refreshCookie() {
-    if (refreshing) return refreshing;
-    refreshing = new Promise(function (resolve) {
-      var frame = document.createElement('iframe');
-      var loads = 0;
-      var finished = false;
-      function done() {
-        if (finished) return;
-        finished = true;
-        setTimeout(function () {
-          if (frame.parentNode) frame.parentNode.removeChild(frame);
-          refreshing = null;
-          resolve();
-        }, 300);
-      }
-      frame.style.display = 'none';
-      frame.setAttribute('aria-hidden', 'true');
-      frame.onload = function () {
-        loads += 1;
-        // التحميل الأول = صفحة التحقق، الثاني = بعد ضبط الكوكي والتحويل
-        if (loads >= 2) done();
-      };
-      frame.src = '/?_r=' + Date.now();
-      (document.body || document.documentElement).appendChild(frame);
-      setTimeout(done, 5000); // حد أقصى للانتظار
-    });
-    return refreshing;
-  }
+  var nativeFetch = window.fetch.bind(window);
 
   function sameOrigin(url) {
-    try { return new URL(url, location.href).origin === location.origin; }
-    catch (e) { return true; }
+    try {
+      return new URL(url, window.location.href).origin === window.location.origin;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function looksLikeJsonRequest(request) {
+    var accept = (request.headers.get('accept') || '').toLowerCase();
+    var requestedWith = (request.headers.get('x-requested-with') || '').toLowerCase();
+    var contentType = (request.headers.get('content-type') || '').toLowerCase();
+    var pathname = new URL(request.url, window.location.href).pathname.toLowerCase();
+
+    // AJAX requests whose bodies are form data are often posted to PHP endpoints
+    // and still expect a JSON response.
+    return accept.indexOf('application/json') >= 0 ||
+      requestedWith === 'xmlhttprequest' ||
+      pathname.indexOf('/api/') >= 0 ||
+      /\.php$/.test(pathname) ||
+      (request.method !== 'GET' &&
+        (contentType.indexOf('application/json') >= 0 ||
+         contentType.indexOf('application/x-www-form-urlencoded') >= 0));
+  }
+
+  function isHtml(response) {
+    var type = (response.headers.get('content-type') || '').toLowerCase();
+    return type.indexOf('text/html') >= 0 || type.indexOf('application/xhtml+xml') >= 0;
+  }
+
+  function jsonError(status, code, message) {
+    return new Response(JSON.stringify({
+      success: false,
+      ok: false,
+      error: message,
+      code: code,
+      retryable: true
+    }), {
+      status: status,
+      statusText: 'Service Unavailable',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Cache-Control': 'no-store'
+      }
+    });
   }
 
   window.fetch = function (input, init) {
     var request;
-    try { request = new Request(input, init); }
-    catch (e) { return originalFetch(input, init); }
 
-    if (!sameOrigin(request.url)) return originalFetch(request);
+    try {
+      request = new Request(input, init);
+    } catch (_) {
+      return nativeFetch(input, init);
+    }
 
-    var retryCopy = request.clone(); // نسخة للإعادة (تحفظ بيانات الفورم)
+    if (!sameOrigin(request.url)) {
+      return nativeFetch(request);
+    }
 
-    return originalFetch(request).then(function (res) {
-      return isChallenge(res).then(function (blocked) {
-        if (!blocked) return res;
+    return nativeFetch(request).then(function (response) {
+      if (!isHtml(response)) {
+        return response;
+      }
 
-        return refreshCookie()
-          .then(function () { return originalFetch(retryCopy); })
-          .then(function (res2) {
-            return isChallenge(res2).then(function (stillBlocked) {
-              if (!stillBlocked) return res2;
-              // آخر حل: تحديث الصفحة بالكامل
-              location.reload();
-              return new Promise(function () {});
-            });
-          });
+      // Read only a *clone*; leave the original response stream intact.
+      return response.clone().text().then(function (body) {
+        var hostChallenge = body.indexOf('aes.js') >= 0 &&
+          body.indexOf('__test') >= 0;
+
+        // Allow ordinary HTML fetches, except the known hosting challenge.
+        if (!hostChallenge && !looksLikeJsonRequest(request)) {
+          return response;
+        }
+
+        var message = hostChallenge
+          ? 'انتهت جلسة التحقق من الاستضافة. حدّثي الصفحة ثم أعيدي المحاولة.'
+          : 'استجاب السيرفر بصفحة HTML بدل بيانات JSON. يرجى المحاولة مجددًا.';
+
+        try {
+          window.dispatchEvent(new CustomEvent('rawiyyah:api-response-error', {
+            detail: {
+              code: hostChallenge ? 'HOSTING_CHALLENGE' : 'UNEXPECTED_HTML',
+              url: request.url,
+              method: request.method
+            }
+          }));
+        } catch (_) {
+          // The event is optional and should never interrupt the request.
+        }
+
+        // Do not auto-retry: a POST may already have been processed by PHP.
+        // Do not auto-reload: challenge pages can otherwise cause reload loops.
+        return jsonError(503, hostChallenge ? 'HOSTING_CHALLENGE' : 'UNEXPECTED_HTML', message);
+      }).catch(function () {
+        // If inspecting the response fails, preserve the native response.
+        return response;
       });
     });
   };
